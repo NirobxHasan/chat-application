@@ -23,7 +23,9 @@ const io = new Server(httpServer,{
 })
 
 
-app.get('/', (_,res)=> res.send(`Server is up and running version ${version}`))
+app.get('/', (req,res)=> {
+  ;
+    res.send(`Server is up and running version ${version} `)})
 
 httpServer.listen(port,host,()=>{
     logger.info(`Server version ${version} is listening`);
